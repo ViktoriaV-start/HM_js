@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		'use strict'
+		function sum(a, b) { //сумма
+			return a + b;
+		}
+		function difference(a, b) { //разность
+			return a - b;
+		}
+		function multiplication(a, b) { //произведение
+			return a * b;
+		}
+		function division(a, b) { //частное
+			return a / b;
+		}
+		let a = +prompt("Введите первое число");
+		let b = +prompt("Введите второе число");
+		alert(a + " + " + b + " = " + sum(a, b));
+		alert(a + " - " + b + " = " + difference(a, b));
+		alert(a + " * " + b + " = " + multiplication(a, b));
+		alert(a + " / " + b + " = " + division(a, b).toFixed(2));
+	</script>
+</body>
+</html>
