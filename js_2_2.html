@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<title>Document</title>
+ </head>
+ <body>
+ 	<script type="text/javascript">
+ 		'use strict'
+/*
+Здесь, кажется, довольно просто:
+1) присвоение переменной а значения 2;
+2) Следующая строка: выполняется действие в скобках (выше приоритет):
+а=а*2=4;
+3) Сложение: 1+4=5;
+4) Присвоение переменной х значения 5.
+Вопрос: почему alert(a, x); - не работает и не выводит сразу два значения?
+*/
+       let a = 2;
+       let x = 1 + (a *=2);
+       alert(a); // = 4
+       alert(x); // = 5
+
+ 	</script>
+ </body>
+ </html>

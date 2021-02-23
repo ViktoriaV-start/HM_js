@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		'use strict'
+		
+        function mathOperation(arg1, arg2, operation) {
+        	switch(operation) {
+
+        		case "сложение":
+        		alert(a + " + " + b + " = " + (a + b));
+        		break;
+
+        		case "вычитание":
+        		alert(a + " - " + b + " = " + (a - b));
+        		break;
+
+        		case "умножение":
+        		alert(a + " * " + b + " = " + (a * b));
+        		break;
+
+        		case "деление":
+        		alert(a + " / " + b + " = " + (a / b).toFixed(2));
+        		break;
+
+        	}
+ 
+        }
+
+		let a = +prompt("Введите первое число");
+		let b = +prompt("Введите второе число");
+		let operation = prompt("Введите название математической операции: сложение, вычитание, умножение, деление:");
+		mathOperation(a, b, operation);
+
+	</script>
+</body>
+</html>

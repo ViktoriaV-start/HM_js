@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			'use strict'
+			function operation(a, b) {
+		if (a === "" || b === "") {
+			alert("Числа введены некорректно");
+			return;
+		}
+		if (a === null || b === null) {
+			alert("Отмена");
+			return;
+		}
+		a = Number(a);
+		b = Number(b);
+		if (isNaN(a) || isNaN(b)) {
+			alert("Числа введены некорректно");
+			return;
+		}
+		/*
+		Если числа положительные - вычислить разность:
+		*/
+				
+				if (a >= 0 && b >= 0) {
+					let difference = a - b;
+			alert(Math.abs(difference));
+			return;
+		}
+		/*
+		Если числа отрицательные - вычислить произведение:
+		*/
+		if (a < 0 && b < 0) {
+					let multiplication = a * b;
+			alert(multiplication);
+			return;
+		} else {
+			let sum = a + b; //если разный знак - сумма
+			alert(sum);
+			return;
+		}
+			}
+			let a = prompt("Введите первое число:");
+			let b = prompt("Введите второе число:");
+			operation(a, b); //ввожу функцию, чтобы сократить проверки
+		
+		</script>
+	</body>
+</html>
