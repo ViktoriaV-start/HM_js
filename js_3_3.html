@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+                'use strict'
+/*
+Перед вами находится массив с продуктами, сегодня распродажа и вам нужно на каждый товар применить скидку 15%, можете использовать метод forEach https://mzl.la/1AOMMWX
+*/
+ 
+        const products = [
+
+        {
+        id: 3,
+        price: 200,
+        },
+
+        {
+        id: 4,
+        price: 900,
+        },
+
+        {
+        id: 1,
+        price: 1000,
+        }, ];
+
+        function sale(product) {
+                product.price = product.price*0.85;
+        }
+        products.forEach(sale);
+        console.log(products);
+
+/* ЕЩЕ ВАРИАНТ С СОЗДАНИЕМ НОВОГО МАССИВОМ - НО ЗДЕСЬ В НОВЫЙ МАССИВ
+ЗАПИСЫВАЮТСЯ ТОЛЬКО НОВЫЕ ЦЕНЫ. ID не записывает. МОЖНО ДОБАВИТЬ id?
+
+        const productSale = products.map(function(newPrice) {
+                return newPrice.price*0.85;
+        } )
+        console.log(productSale);
+        console.log(products);
+*/
+
+
+	</script>
+</body>
+</html>
