@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		"use strict"
+
+
+		let userNumber = prompt("Ввведите число");
+		let numberString = userNumber.split("");
+		console.log(numberString);
+		let number = numberString.map(function(x) {
+			return x = +x;
+		} )
+		console.log(number);
+
+
+		class Num1 {
+			constructor (units) {
+				this.units = units;
+			}
+		}
+
+		class Num2 extends Num1 {
+			constructor (units, tens) {
+				super(units);
+				this.tens = tens;
+			}
+		}
+
+
+		class Num3 extends Num2 {
+			constructor (units, tens, hundreds) {
+				super(units, tens);
+				this.hundreds = hundreds;
+			}
+		}
+
+
+		if (number.length == 1) {
+			let answer = new Num1(number[0]);
+			console.log(answer);
+		}
+		if (number.length == 2) {
+			let answer = new Num2(number[1], number[0]);
+			console.log(answer);
+			
+		}
+
+		if (number.length == 3) {
+			let answer = new Num3(number[2], number[1], number[0]);
+			console.log(answer);
+		}
+		
+
+
+	</script>
+	
+</body>
+</html>

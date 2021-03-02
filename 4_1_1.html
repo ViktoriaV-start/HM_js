@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		'use strict'
+
+		function Product(name, price) {
+			this.name = name;
+			this.price = price;
+		};
+
+		Product.prototype.make25PercentDiscount = function() {
+			this.price *= 0.75;
+		}
+
+
+		let product1 = new Product('Арбуз', 100);
+		console.log(product1);
+		product1.make25PercentDiscount();
+		console.log(product1);
+
+		let product2 = new Product('Апельсин', 250);
+		console.log(product2);
+		product2.make25PercentDiscount();
+		console.log(product2);
+
+		let product3 = new Product('Ананас', 500);
+		console.log(product3);
+		product3.make25PercentDiscount();
+		console.log(product3);
+
+//Из видео вижу, как можно сделать массив из продуктов:
+
+		let products = [
+			new Product('Клубника', 100),
+			new Product('Черника', 200),
+			new Product('Земляника', 300),
+		];
+
+/*
+Не смогла применить функцию-скидку из конструктора к элементам. 
+Массив из объектов выводится без изменения цены. 
+Что не так? Или вообще это не так делается?
+*/		
+		products.forEach(function(element) {
+			element.make25PercentDiscount;
+			console.log(element); 
+		});
+/*
+Следующией вариант сам считает скидку.
+*/
+		products.forEach(function(element) {
+			console.log(element);
+			element.price *= 0.75;
+		});
+
+		console.log(products);
+
+	</script>
+	
+</body>
+</html>
