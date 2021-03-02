@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="menu"></div>
+    <div>
+        <div class="special">111</div>
+         <div class="special">222</div> 
+         <div class="special">333</div> 
+         <div class="special">444</div>
+         <button>Кнопка</button>
+    </div>
+
+    <!-- Задание. Добавьте в div с классом .menu следующую разметку:
+    <a href="#">link</a>
+    используя метод insertAdjacentHTML.
+    -->
+    <script>
+    	'use strict';
+
+    	let menu = document.querySelector('.menu');
+    	menu.insertAdjacentHTML('afterbegin', '<a href="#">link</a>');
+    	console.log(menu);
+
+//тренировка
+        let special = document.querySelectorAll(".special");
+        special.forEach(function(element) {
+            element.style.color = 'green';
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Кнопка</button>
+    <button class="btn">Кнопка с классом btn</button>
+    <button class="btn">Дополнительная кнопка с классом btn</button>
+    <button>Кнопка</button>
+
+    <!-- Задание. Сделайте, чтобы по клику по кнопке с классом .btn появлялся
+    alert('клик') -->
+
+    <script>
+        'use strict';
+        
+        let elt = document.getElementsByClassName("btn");
+        console.log(elt);
+        for (let i = 0; i < elt.length; i++) {
+            elt[i].addEventListener('click', function(event) {
+                alert('click');
+                elt[i].style.color = 'green';
+            });
+        }
+
+    </script>
+</body>
+</html>
